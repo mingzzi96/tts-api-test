@@ -80,9 +80,11 @@ export default {
       const voices = window.speechSynthesis.getVoices();
       return voices.find((voice) => voice.lang.startsWith(langCode));
     },
+    /**
+     * i18n 언어 번역 기능을 사용하고 있기 때문에 필요한 함수
+     * @param {string} locale
+     */
     getLangCode(locale) {
-      console.log("getLangCode locale");
-      console.log(locale);
       switch (locale) {
         case "ko":
           return "ko-KR";
